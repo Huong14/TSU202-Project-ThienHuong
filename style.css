@@ -1,0 +1,362 @@
+* {
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: 100px;
+}
+
+.logo {
+    padding-top: 35px;
+}
+.search {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+.product {
+   display: flex;
+    justify-content: center;
+    gap: 40px; 
+    background-color: #2E2E2E;
+    color: white;
+    height: 48px;
+    align-items: center;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    background-color: #211C24;
+    color: white;
+    gap: 80px;
+}
+
+.hero-container{
+    padding: 100px 50px;
+    
+}
+
+.iphone14 {
+    height: 400px;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.btn-buy {
+    border-radius: 5px;
+    padding: 8px 30px;
+    background-color: #211C24;
+    color: white;
+    border: 1px solid white;
+}
+
+.product-item {
+    height: 300px;
+    background-color: #FAFAFA;
+}
+
+.product-menu {
+    padding: 50px 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;  
+}
+
+.box1 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.box2 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.box3 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.box4 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.box5 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.box6 {
+    height: 100px;
+    width: 100px;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+.product-price {
+    height: 800px;
+}
+
+.product-price-menu {
+    padding-top: 50px;
+    padding-left: 250px;
+    display: flex;
+    gap: 20px;
+}
+
+.Bestseller {
+    text-decoration: none;
+}
+
+.Featured {
+    text-decoration: none;
+}
+
+.product-price-box {
+    padding: 10px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    height: 700px;
+}
+
+.price-box1 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.price-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.price-photo {
+    position: absolute;
+    left: 65px;
+}
+
+.btn-price {
+    padding: 8px 40px;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+   
+}
+
+.price-box2 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box3 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box4 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box5 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box6 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box7 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.price-box8 {
+    height: 300px;
+    width: 200px;
+    background-color: #F6F6F6;
+    position: relative;
+    border-radius: 10px;
+}
+.product-sale {
+     height: 400px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+.sale-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+.text-sale {
+    padding-left: 220px;
+}
+
+.hero-summer {
+    height: 400px;
+    background-color: #2E2E2E;
+    color: white;
+    position: relative;
+}
+.content-summer {
+     display: flex;
+     flex-direction: column;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.btn-summer {
+    border-radius: 5px;
+    padding: 8px 30px;
+    background-color: #211C24;
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    top: 250px;
+    left: 565px;
+}
+
+.summer1 {
+    position: absolute;
+    top: 5px;
+    left: 200px;
+}
+.summer2 {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.summer3 {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+}
+.summer4 {
+    position: absolute;
+    bottom: 5px;
+    right: 200px;
+}
+.summer5 {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    transform: rotate(329deg);
+}
+
+.contact {
+    height: 400px;
+    background-color: black;
+    color: white;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 50px;
+}
+
+.contact-container a {
+    text-decoration: none;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-logo {
+    padding-top: 20px;
+    padding-left: 200px;
+    display: flex;
+    gap: 30px;
+}
