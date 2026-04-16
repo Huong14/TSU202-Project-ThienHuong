@@ -36,8 +36,7 @@
 }
 
 .container form {
-    padding-left: 420px;
-    padding-top: 20px;
+    text-align: center;
 }
 
 .register {
@@ -51,9 +50,23 @@
     padding: 12px 190px;
     background-color: blue;
     color: white;
+    border-radius: 5px;
+    border: none;
 }
 
 .login-text {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .name input {
+    padding: 12px 132px;
+}
 }

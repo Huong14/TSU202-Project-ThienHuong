@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./register-style.css">
+    <link rel="stylesheet" href="../css/register-style.css">
 </head>
 <body>
     <div class="title">
@@ -14,41 +14,41 @@
     <div class="name">
         <form action="">
             <label for="">Họ và tên đệm</label><br>
-            <input type="text">
+            <input id="first-name" type="text">
         </form>
         <form action="">
             <label for="">Tên</label><br>
-            <input type="text">
+            <input id="last-name" type="text">
         </form>
     </div>
 
     <div class="email-password">
         <form action="">
-            <label for="email">Email</label><br>
-            <input type="text" placeholder="you@company.com">
+            <label for="">Email</label><br>
+            <input id="email" type="text" placeholder="you@company.com">
         </form>
         <form action="">
-            <label for="password">Mật khẩu</label><br>
-            <input type="password">
+            <label for="">Mật khẩu</label><br>
+            <input id="password" type="password">
         </form>
         <form action="">
-            <label for="password">Xác nhận mật khẩu</label><br>
-            <input type="password">
+            <label for="">Xác nhận mật khẩu</label><br>
+            <input id="re-password" type="password"><br>
         </form>
     </div>
     <div class="container">
         <form action="">
             <input type="checkbox">
-            <label for="agree">Bạn đồng ý với <a href="">chính sách và điều khoản</a></label>
+            <label for="">Bạn đồng ý với <a href="">chính sách và điều khoản</a></label>
         </form>
-        <div class="register">
-            <button class="btn-register">Đăng ký</button>
-        </div>
+        <form class="register" id="form-register">
+            <button class="btn-register" type="submit">Đăng ký</button>
+        </form>
         <div class="login-text">
-            <p>Bạn đã có tài khoản? <a href="">Đăng nhập</a></p>
+            <p>Bạn đã có tài khoản? <a href="./login.html">Đăng nhập</a></p>
         </div>
     </div>
     
-
+    <script src="../js/register.js"></script>
 </body>
 </html>

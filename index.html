@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+        <div class="menu">
+            <h4>&#x1F525 Ecommerce</h4>
+            <button style="background-color: white; border: none;">&#8962 Thống kê</button><br>
+            <button style="background-color: white; border: none;"><img height="20" width="20" src="https://static.vecteezy.com/system/resources/previews/060/564/621/non_2x/requirement-icon-symbol-art-vector.jpg" alt="">Danh mục</button><br>
+            <button style="background-color: white; border: none;">&#128193 Sản phẩm</button><br>
+            <button id="btn-logout">Đăng xuất</button>    
+            
+        </div>
+    </nav>
+
+    <div class="ecommerce">
+          <div class="logo">&#128276 &#128100</div>
+          <h3>Danh mục</h3>
+
+    <form action="" id="form-addProduct">
+        <button class="btn-add" type="submit">Thêm mới danh mục</button>
+    </form>
+
+    <select class="state" name="" id="">
+        <option value="">Tất cả</option>
+        <option value="">Đang hoạt động</option>
+        <option value="">Ngừng hoạt động</option>
+    </select>
+    <input class="search" type="text" placeholder="Tìm kiếm danh mục" id="input-search">
+    <table class="table-ecommerce" border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody id="table-categories">
+            <tr>
+                <td>DM001</td>
+                <td>Quần áo</td>
+                <td>Đang hoạt động</td>
+                <td>
+                    <button style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
+                    <button class="btn-update" type="submit" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+    <div class="overlay">
+      <div class="modal">
+        <form class="modal-body">
+            <h3>Thêm mới danh mục</h3><br>
+        <label for="">Mã danh mục</label><br><br>
+          <input type="text" name="productId"><br><br>
+          <label for="">Tên danh mục</label><br><br>
+          <input type="text" name="productName"><br><br>
+          <span>Trạng thái</span><br>
+          <input type="checkbox">
+          <label for="">Đang hoạt động</label>
+          <input type="checkbox">
+          <label for="">Ngừng hoạt động</label><br><br>
+          <button class="btn-add" type="submit">Thêm</button>
+
+          <spa class="btn-close">x</spa>
+        </form>
+      </div>
+
+     
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
