@@ -81,3 +81,34 @@
         top: 5px;
         right: 10px;
       }
+
+
+      /* .overlay-update {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-update {
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+      }
+      .modal-body-update {
+        position: relative;
+        height: 400px;
+        width: 500px;
+        padding: 10px;
+      }
+
+      .modal-body-update input {
+        padding: 10px 100px;
+      }
+      .btn-update-close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+      } */

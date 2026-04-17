@@ -19,7 +19,7 @@ function renderCategories(arr) {
     tableCategories.innerHTML = "";
     let newCategories = arr.map((c) => {
         return `
-            <tr>
+            <tr style="border: none;">
                 <td>${c.id}</td>
                 <td>${c.productName}</td>
                 <td>${c.status}</td>
@@ -51,6 +51,15 @@ formAddProduct.addEventListener("submit", (event) => {
         alert("Khong duoc nhap id trung!");
         return;
     }
+    
+    if (productIdInput === "") {
+        document.getElementById("test-id").textContent = "Mã danh mục không được để trống";
+    }
+
+    if (productNameInput === "") {
+        document.getElementById("test-name").textContent = "Tên danh mục không được để trống";
+    }
+
     console.log(productIdInput, productNameInput);
     let newCategory = {
         id: productIdInput,
@@ -67,10 +76,17 @@ formAddProduct.addEventListener("submit", (event) => {
 function handleDelete(id) {
     categories = categories.filter((c) => {
         return c.id !== id;
+
     });
+      
+
     localStorage.setItem("categories", JSON.stringify(categories));
     renderCategories(categories);
 }
+
+
+
+
 
 
 let inputSearch = document.getElementById("input-search");
@@ -82,26 +98,24 @@ inputSearch.addEventListener("input", (event) => {
     console.log(newArr);
     renderCategories(newArr);
 
+});
 
 
+ let isLogin = JSON.parse(localStorage.getItem("isLogin"));
+ if (!isLogin) {
+     window.location.href = "./pages/login.html";
+ }
 
-let isLogin = JSON.parse(localStorage.getItem("isLogin"));
-if (!isLogin) {
-    window.location.href = "./pages/login.html";
-}
+ let btnLogout = document.getElementById("btn-logout");
 
-let btnLogout = document.getElementById("btn-logout");
-
-btnLogout.addEventListener("click", () => {
-    if (confirm("Ban chac chan logout khong")) {
-        localStorage.removeItem("isLogin");
+ btnLogout.addEventListener("click", () => {
+     if (confirm("Ban chac chan logout khong")) {
+         localStorage.removeItem("isLogin");
         window.location.href = "./pages/login.html";
-    }
-});
+     }
+ });
 
-renderCategories(categories);
-
-});
+ renderCategories(categories);
 
 
 let btnOpen = document.querySelector('.btn-add');
@@ -116,4 +130,17 @@ btnOpen.onclick = function () {
 btnClose.onclick = function () {
   overlay.style.display = 'none';
 };
+
+//  let btnOpenupdate = document.querySelector('.btn-update');
+//   let btnCloseupdate = document.querySelector('.btn-update-close');
+//  let overlayUpdate = document.querySelector('.overlay-update');
+//   btnOpenupdate.onclick = function () {
+//       console.log("Đã vào đây");
+    
+//    overlayUpdate.style.display = 'block';
+//   };
+
+//   btnCloseupdate.onclick = function () {
+//    overlayUpdate.style.display = 'none';
+//   };
 
