@@ -16,7 +16,7 @@ localStorage.setItem("categories", JSON.stringify(categories));
 
 function renderCategories(arr) {
     let tableCategories = document.getElementById("table-categories");
-    tableCategories.innerHTML = ""; // reset du lieu ben trong the
+    tableCategories.innerHTML = "";
     let newCategories = arr.map((c) => {
         return `
             <tr>
@@ -24,7 +24,7 @@ function renderCategories(arr) {
                 <td>${c.productName}</td>
                 <td>${c.status}</td>
                  <td>
-                    <button onclick="handleDelete(${c.id} style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
+                    <button onclick="handleDelete('${c.id}')" style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
                     <button style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
                 </td>
                 
@@ -39,7 +39,7 @@ function renderCategories(arr) {
 let formAddProduct = document.getElementById("form-addProduct");
 formAddProduct.addEventListener("submit", (event) => {
     event.preventDefault();
-    let productIdInput = Number(formAddProduct.productId.value.trim());
+    let productIdInput = formAddProduct.productId.value.trim();
     let productNameInput = formAddProduct.productName.value.trim();
 
     let checkId = categories.some((c) => {
@@ -55,7 +55,7 @@ formAddProduct.addEventListener("submit", (event) => {
     let newCategory = {
         id: productIdInput,
         productName: productNameInput,
-        status: "Dang hoat dong",
+        status: "Đang hoạt động",
     }
 
     categories.push(newCategory);
@@ -77,12 +77,11 @@ let inputSearch = document.getElementById("input-search");
 inputSearch.addEventListener("input", (event) => {
     let value = inputSearch.value.trim();
     let newArr = categories.filter((c) => {
-    let newArr = categories.filter((c) => {
         return c.productName.includes(value);
     });
     console.log(newArr);
     renderCategories(newArr);
-});
+
 
 
 
@@ -109,6 +108,8 @@ let btnOpen = document.querySelector('.btn-add');
 let btnClose = document.querySelector('.btn-close');
 let overlay = document.querySelector('.overlay');
 btnOpen.onclick = function () {
+    console.log("Đã vào đây");
+    
   overlay.style.display = 'block';
 };
 
