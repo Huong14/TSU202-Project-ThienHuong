@@ -131,29 +131,41 @@ btnClose.onclick = function () {
 
 
 function handleUpdate(id) {
-    let category = categories.find(c => c.id === id);
 
-    document.getElementById("edit-id").value = category.id;
-    document.getElementById("editname").value = category.productName;
+
+
+    let category = categories.find((c) => c.id === id);
+
+     document.getElementById('edit-id').value = category.id;
+     document.getElementById('editname').value = category.productName;
   
 
-    document.getElementById("form-edit").style.display = "block";
-}
+     document.getElementById('form-edit').style.display = 'block';
+ }
+
+ 
+    let formUpdate = document.getElementById('form-update');
+
+    formUpdate.addEventListener('sumit', (event) => {
+        event.preventDefault();
+        saveUpdate();
+    });
 
 
 function saveUpdate() {
-    let id = document.getElementById("edit-id").value;
-    let name = document.getElementById("editname").value;
+    let id = document.getElementById('edit-id').value;
+    let name = document.getElementById('editname').value;
 
 
-    let index = categories.findIndex(c => c.id === id);
+    let index = categories.findIndex((c) => c.id === id);
 
     categories[index].productName = name;
-
+     
+    localStorage.setItem("categories", JSON.stringify(categories));
     renderCategories(categories);
-    
+    closeForm()
 }
 
 function closeForm() {
-    document.getElementById("edit-form").style.display = "none";
+    document.getElementById("form-edit").style.display = "none";
 }
