@@ -50,7 +50,7 @@
                 <td>Đang hoạt động</td>
                 <td>
                     <button id="btn-delete" style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
-                    <button id="btn-update" type="submit" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
+                    <button onclick="handleUpdate('DM001')" id="btn-update" type="submit" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
                 </td>
             </tr>
             
@@ -82,24 +82,26 @@
 
 
     <div class="overlay-update">
-      <div id="form-edit"  style="display: none;">
-        <form id="form-update">
-            <h3>Cập nhật danh mục</h3><br>
-           <label>Mã danh mục</label><br><br>
-          <input id="edit-id" type="text" name="productId"><br><br>
-          <label>Tên danh mục</label><br><br>
-          <input id="editname" type="text" name="productName"><br><br>
-          <span>Trạng thái</span><br>
-          <input type="checkbox">
-          <label >Đang hoạt động</label>
-          <input type="checkbox">
-          <label >Ngừng hoạt động</label><br><br>
-          <button id="btn-save" type="submit">Lưu</button>
+  <div class="modal-update" id="form-edit" style="display: none;">
+    <form id="form-update" class="modal-body-update">
+        <h3>Cập nhật danh mục</h3><br>
+        <label>Mã danh mục</label><br><br>
+        <input id="edit-id" type="text" name="productId"><br><br>
 
-          <span id="btn-editclose" class="btn-update-close">x</span>
-        </form>
-      </div> 
-   </div>
+        <label>Tên danh mục</label><br><br>
+        <input id="editname" type="text" name="productName"><br><br>
+
+        <span>Trạng thái</span><br>
+        <input type="checkbox">
+        <label>Đang hoạt động</label>
+        <input type="checkbox">
+        <label>Ngừng hoạt động</label><br><br>
+         <button id="btn-cancel" type="button">Hủy</button>
+        <button id="btn-save" type="submit">Lưu</button>
+
+        <span id="btn-editclose" class="btn-update-close">x</span>
+    </form>
+  </div>
 
 
     <script src="./js/main.js"></script>

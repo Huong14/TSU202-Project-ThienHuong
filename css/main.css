@@ -82,7 +82,7 @@
         right: 10px;
       }
 
-/* 
+
        .overlay-update {
         display: none;
         position: fixed;
@@ -111,4 +111,23 @@
         position: absolute;
         top: 5px;
         right: 10px;
-      }   */
+      }   
+
+    #btn-save {
+    padding: 10px 30px;
+    background-color: #4094F7;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    right: 10px;
+}
+
+
+#btn-cancel {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    right: 110px;
+}

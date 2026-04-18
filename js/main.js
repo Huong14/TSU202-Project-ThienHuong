@@ -139,14 +139,14 @@ function handleUpdate(id) {
      document.getElementById('edit-id').value = category.id;
      document.getElementById('editname').value = category.productName;
   
-
+     document.querySelector('.overlay-update').style.display = 'block';
      document.getElementById('form-edit').style.display = 'block';
  }
 
  
     let formUpdate = document.getElementById('form-update');
 
-    formUpdate.addEventListener('sumit', (event) => {
+    formUpdate.addEventListener('submit', (event) => {
         event.preventDefault();
         saveUpdate();
     });
@@ -163,9 +163,14 @@ function saveUpdate() {
      
     localStorage.setItem("categories", JSON.stringify(categories));
     renderCategories(categories);
-    closeForm()
+   
+    document.querySelector(".overlay-update").style.display = "none";
 }
 
-function closeForm() {
+document.getElementById("btn-cancel").addEventListener("click", closeFormUpdate);
+document.getElementById("btn-editclose").addEventListener("click", closeFormUpdate);
+
+function closeFormUpdate() {
+    document.querySelector(".overlay-update").style.display = "none";
     document.getElementById("form-edit").style.display = "none";
 }
