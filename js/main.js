@@ -25,7 +25,7 @@ function renderCategories(arr) {
                 <td>${c.status}</td>
                  <td>
                     <button onclick="handleDelete('${c.id}')" style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
-                    <button style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
+                    <button onclick="update('${c.id}')" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
                 </td>
                 
             </tr>
@@ -79,12 +79,9 @@ function handleDelete(id) {
 
     });
       
-
     localStorage.setItem("categories", JSON.stringify(categories));
     renderCategories(categories);
 }
-
-
 
 
 
@@ -131,16 +128,21 @@ btnClose.onclick = function () {
   overlay.style.display = 'none';
 };
 
-//  let btnOpenupdate = document.querySelector('.btn-update');
-//   let btnCloseupdate = document.querySelector('.btn-update-close');
-//  let overlayUpdate = document.querySelector('.overlay-update');
-//   btnOpenupdate.onclick = function () {
-//       console.log("Đã vào đây");
-    
-//    overlayUpdate.style.display = 'block';
-//   };
 
-//   btnCloseupdate.onclick = function () {
-//    overlayUpdate.style.display = 'none';
-//   };
 
+let update = document.getElementById('btn-update');
+let btnSave = document.getElementById('btn-save');
+let formEdit = document.getElementById('form-edit');
+let fieldInput = document.getElementById('field-input');
+
+update.addEventListener('click',function() {
+    formEdit.style.display = 'block';
+    update.style.display = 'none';
+});
+
+btnSave.addEventListener('click', function() {
+    let newValue = fieldInput.ariaValueMax;
+    categories.textContent = newValue;
+    formEdit.style.display = 'none';
+    update.style.display = 'block';
+});
