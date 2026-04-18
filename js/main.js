@@ -25,7 +25,7 @@ function renderCategories(arr) {
                 <td>${c.status}</td>
                  <td>
                     <button onclick="handleDelete('${c.id}')" style="background-color: white; border: none;"><img height="50" width="50" src="https://thumbs.dreamstime.com/b/%C3%ADcone-vermelho-da-linha-lixeira-no-fundo-branco-ilustra%C3%A7%C3%A3o-vetorial-de-estilo-plano-171177844.jpg" alt="Xoa"></button>
-                    <button onclick="update('${c.id}')" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
+                    <button onclick="handleUpdate('${c.id}')" style="background-color: white; border: none;"><img height="30" width="30" src="https://static.vecteezy.com/system/resources/previews/050/307/148/large_2x/pencil-icon-design-illustration-vector.jpg" alt="Sua"></button>
                 </td>
                 
             </tr>
@@ -130,19 +130,30 @@ btnClose.onclick = function () {
 
 
 
-let update = document.getElementById('btn-update');
-let btnSave = document.getElementById('btn-save');
-let formEdit = document.getElementById('form-edit');
-let fieldInput = document.getElementById('field-input');
+function handleUpdate(id) {
+    let category = categories.find(c => c.id === id);
 
-update.addEventListener('click',function() {
-    formEdit.style.display = 'block';
-    update.style.display = 'none';
-});
+    document.getElementById("edit-id").value = category.id;
+    document.getElementById("editname").value = category.productName;
+  
 
-btnSave.addEventListener('click', function() {
-    let newValue = fieldInput.ariaValueMax;
-    categories.textContent = newValue;
-    formEdit.style.display = 'none';
-    update.style.display = 'block';
-});
+    document.getElementById("form-edit").style.display = "block";
+}
+
+
+function saveUpdate() {
+    let id = document.getElementById("edit-id").value;
+    let name = document.getElementById("editname").value;
+
+
+    let index = categories.findIndex(c => c.id === id);
+
+    categories[index].productName = name;
+
+    renderCategories(categories);
+    
+}
+
+function closeForm() {
+    document.getElementById("edit-form").style.display = "none";
+}
